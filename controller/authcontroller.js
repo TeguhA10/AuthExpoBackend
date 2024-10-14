@@ -48,7 +48,7 @@ const register = async (req, res) => {
         //     }
         // });
 
-        res.json({ message: 'Register successful' });
+        res.json({ message: 'Register successful', token: token });
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: 'Terjadi kesalahan dalam registrasi' });
@@ -91,7 +91,7 @@ const login = async (req, res) => {
         //     }
         // });
 
-        res.json({ message: 'Login successful' });
+        res.json({ message: 'Login successful', token: token });
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: 'Terjadi kesalahan dalam otentikasi' });
